@@ -10,6 +10,7 @@
 - Backend reminders are the best fit for a narrow, testable patch.
 - Best practical shape is a backend-only behavior fix with API-level pytest coverage.
 - Current cycle target: issue #123, keep failed reminder dispatch unsent and visible.
+- Local reminder tests may need the fake Redis fixture in `tests/conftest.py`, so keep proof runnable without a live Redis daemon.
 
 ## Guardrails
 - Keep the PR to one claim.

@@ -7,3 +7,5 @@ Likely maintainer objection: this changes job semantics without implementing ful
 Required proof: regression test that failed delivery stays unsent, successful dispatch still marks sent, and the response reflects failures without broad behavioral drift.
 Risk level: medium-low, backend-only, localized to reminders run path.
 PR mode: draft PR only after tests pass and the diff is reviewable; keep the claim to failed-delivery handling, not full retry architecture.
+
+Verification note: backend tests now run against a fake Redis fixture in `tests/conftest.py`, so the reminder/auth paths are reproducible without a live Redis daemon in this workspace.
